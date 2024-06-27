@@ -7,7 +7,7 @@ using Random = UnityEngine.Random;
 
 public class AppFlowManager : MonoBehaviour
 {
-    [SerializeField] private GameObject _criminalBlock;
+    [SerializeField] private GameObject _criminalBlock, _hiders;
     [SerializeField] private TMP_Text _felony;
     [SerializeField] private RawImage _videoImage;
     private bool _faceFound;
@@ -51,6 +51,7 @@ public class AppFlowManager : MonoBehaviour
         _videoImage.gameObject.SetActive(false);
         _flowStarted = true;
         _criminalBlock.SetActive(true);
+        _hiders.SetActive(true);
         _isCycling = true;
         timer = _randomizationDuration;
         while (timer > 0f)
@@ -64,6 +65,7 @@ public class AppFlowManager : MonoBehaviour
         yield return new WaitForSeconds(_resultOnScreenDuration);
         _isResultShowing = false;
         _criminalBlock.SetActive(false);
+        _hiders.SetActive(false);
         _flowStarted = false;
         _videoImage.gameObject.SetActive(true);
     }
@@ -73,6 +75,7 @@ public class AppFlowManager : MonoBehaviour
         yield return new WaitForSeconds(_trackLostGracePeriod);
         if (_flowRoutine != null) StopCoroutine(_flowRoutine);
         _videoImage.gameObject.SetActive(true);
+        _hiders.SetActive(false);
         _flowStarted = false;
         _isCycling = false;
     }
