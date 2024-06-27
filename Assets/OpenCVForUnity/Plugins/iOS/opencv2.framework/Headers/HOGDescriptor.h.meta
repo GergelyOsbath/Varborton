@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 2e69fd6768f57ca488c921b9ff710f9f
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/HOGDescriptor.h
+  uploadId: 638184

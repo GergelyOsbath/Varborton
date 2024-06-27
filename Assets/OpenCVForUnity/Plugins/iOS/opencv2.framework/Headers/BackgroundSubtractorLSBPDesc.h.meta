@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 6f7ab7ea555c22f46947853f49d0e2c7
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/BackgroundSubtractorLSBPDesc.h
+  uploadId: 638184

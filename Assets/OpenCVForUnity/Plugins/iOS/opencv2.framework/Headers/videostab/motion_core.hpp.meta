@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 5f3cf84e42b544f0285d2737f39126bb
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/videostab/motion_core.hpp
+  uploadId: 638184

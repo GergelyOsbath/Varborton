@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 315f4da185081c5418b9db561c89c0d6
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/phase_unwrapping/phase_unwrapping.hpp
+  uploadId: 638184

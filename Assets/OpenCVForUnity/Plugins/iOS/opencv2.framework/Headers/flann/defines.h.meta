@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 502d23002c74c425bb26604be1b59b1a
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/flann/defines.h
+  uploadId: 638184

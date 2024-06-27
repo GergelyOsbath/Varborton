@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: f254d4579907fbe4ca9e57fd9f2f211a
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/HistogramPhaseUnwrappingParams.h
+  uploadId: 638184

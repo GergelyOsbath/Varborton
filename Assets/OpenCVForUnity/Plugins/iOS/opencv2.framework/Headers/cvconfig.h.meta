@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 08abd99551c064bf585d26b00a306dec
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/cvconfig.h
+  uploadId: 638184

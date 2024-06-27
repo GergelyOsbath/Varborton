@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 2aa27a1ec35074921978e2cdd89cd62f
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/core/cuda/transform.hpp
+  uploadId: 638184

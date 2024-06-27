@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 16838f9e2eea7934a9d8c467e5164e0d
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/BackgroundSubtractorKNN.h
+  uploadId: 638184

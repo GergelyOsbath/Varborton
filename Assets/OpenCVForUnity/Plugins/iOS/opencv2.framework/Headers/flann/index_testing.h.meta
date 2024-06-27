@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 33d350602a2c4414d82fe6e2b8202390
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/flann/index_testing.h
+  uploadId: 638184

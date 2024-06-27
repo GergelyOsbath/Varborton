@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: ac31a7bfd61dbcf4880f644fa3d10725
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/AverageHash.h
+  uploadId: 638184

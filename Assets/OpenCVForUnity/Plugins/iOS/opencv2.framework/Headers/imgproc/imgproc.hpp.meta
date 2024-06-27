@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 4defaa8fa3eaa486ebac5e1a2fb9ce8d
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/imgproc/imgproc.hpp
+  uploadId: 638184

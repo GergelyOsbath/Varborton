@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 4faf42c3f6534ad4fb44f893ee29d698
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/core/hal/intrin_wasm.hpp
+  uploadId: 638184

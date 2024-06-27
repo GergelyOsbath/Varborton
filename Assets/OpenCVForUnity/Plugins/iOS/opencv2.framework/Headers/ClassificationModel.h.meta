@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 9cf130a2a0bd23a458a506c152b6e9a9
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/ClassificationModel.h
+  uploadId: 638184

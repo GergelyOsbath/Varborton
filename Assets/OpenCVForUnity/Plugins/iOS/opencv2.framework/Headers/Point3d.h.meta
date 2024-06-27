@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: fdd33b99514f4e346b138e82d0d04c42
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/Point3d.h
+  uploadId: 638184

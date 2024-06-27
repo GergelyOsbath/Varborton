@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: b5f46d051121db041a96f209b5e8b5af
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/NormalBayesClassifier.h
+  uploadId: 638184

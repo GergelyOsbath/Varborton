@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 9e1c5e901e949614b83f285ec8929b70
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/MatOfInt.h
+  uploadId: 638184

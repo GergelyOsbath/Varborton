@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 0d9db65d4110e4a41b8c48a827b8d9fa
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/ximgproc/scansegment.hpp
+  uploadId: 638184

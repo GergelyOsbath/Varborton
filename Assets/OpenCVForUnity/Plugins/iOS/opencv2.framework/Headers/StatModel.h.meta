@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: f1d98f2f8607e51498415626d69964cc
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/StatModel.h
+  uploadId: 638184

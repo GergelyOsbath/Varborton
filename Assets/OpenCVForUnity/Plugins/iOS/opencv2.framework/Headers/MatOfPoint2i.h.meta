@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: a35fc15df5683544899dcbda5fadd7bf
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/MatOfPoint2i.h
+  uploadId: 638184

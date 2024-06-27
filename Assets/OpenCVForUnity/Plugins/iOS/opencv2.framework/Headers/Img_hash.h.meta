@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 90741de4a95574841b15439789b5685c
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/Img_hash.h
+  uploadId: 638184

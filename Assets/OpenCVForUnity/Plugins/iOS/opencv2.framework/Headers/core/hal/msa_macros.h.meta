@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: f7e5df1395dd15e4596f805de5f9015a
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/core/hal/msa_macros.h
+  uploadId: 638184

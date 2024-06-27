@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 1de2462c4eb389c46a5f9c4944235970
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/ximgproc/find_ellipses.hpp
+  uploadId: 638184

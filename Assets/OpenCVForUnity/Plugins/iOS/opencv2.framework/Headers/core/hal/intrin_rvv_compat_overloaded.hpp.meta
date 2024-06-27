@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: bce7367b1cc3fd941bdb3a7455286c8f
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/core/hal/intrin_rvv_compat_overloaded.hpp
+  uploadId: 638184

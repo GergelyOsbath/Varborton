@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 581fdb5b5a4d04943ba917d1cbc4d1fb
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/quality/qualitymse.hpp
+  uploadId: 638184

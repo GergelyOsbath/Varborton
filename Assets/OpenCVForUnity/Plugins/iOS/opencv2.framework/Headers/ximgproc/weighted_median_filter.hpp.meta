@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: b1532ce894b8d4900860de27fee4031b
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/ximgproc/weighted_median_filter.hpp
+  uploadId: 638184

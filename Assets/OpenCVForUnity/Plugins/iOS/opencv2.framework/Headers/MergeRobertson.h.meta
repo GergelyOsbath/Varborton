@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: ddec8e4caff114c409ef9b9b9c806f22
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/MergeRobertson.h
+  uploadId: 638184

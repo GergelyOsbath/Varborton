@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: d43d2edcdf8811a4e9fb2cc382a0b720
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Examples/Advanced/MultiObjectTrackingExample/ByteTrack/Track.cs
+  uploadId: 638184

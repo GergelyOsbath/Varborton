@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: d3c9110c21c3c4bab8282c021f3bad48
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/ximgproc/ridgefilter.hpp
+  uploadId: 638184

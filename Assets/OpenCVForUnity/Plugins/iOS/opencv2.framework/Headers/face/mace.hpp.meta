@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: f6d77bb0acab44430bc1c97e75b4c2c5
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/face/mace.hpp
+  uploadId: 638184

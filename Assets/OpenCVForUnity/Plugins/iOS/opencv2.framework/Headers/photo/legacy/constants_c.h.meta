@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: dc035019ca0c54345b037e59735de8fb
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/photo/legacy/constants_c.h
+  uploadId: 638184

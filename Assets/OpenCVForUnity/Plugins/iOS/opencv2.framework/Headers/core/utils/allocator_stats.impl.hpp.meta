@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 38aec7fad11329841a519d28df1c725d
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/core/utils/allocator_stats.impl.hpp
+  uploadId: 638184

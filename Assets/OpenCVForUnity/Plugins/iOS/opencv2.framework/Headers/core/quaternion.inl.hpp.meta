@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 8f02dbcd749dff04a954daf9c8f264ac
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/core/quaternion.inl.hpp
+  uploadId: 638184

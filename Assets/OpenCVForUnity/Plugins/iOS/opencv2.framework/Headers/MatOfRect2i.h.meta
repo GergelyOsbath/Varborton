@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: f66c4f4795aa33440afc9580f1028f9f
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/MatOfRect2i.h
+  uploadId: 638184

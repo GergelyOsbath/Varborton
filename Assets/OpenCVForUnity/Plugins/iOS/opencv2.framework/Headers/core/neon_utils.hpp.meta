@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: a46cc32efdc8c4acb802c7d7d4879247
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/core/neon_utils.hpp
+  uploadId: 638184

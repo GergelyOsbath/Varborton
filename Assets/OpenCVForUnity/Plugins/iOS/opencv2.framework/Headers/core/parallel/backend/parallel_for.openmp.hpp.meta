@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 2729c4ed82d9cf341b547e4e6d78a812
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/core/parallel/backend/parallel_for.openmp.hpp
+  uploadId: 638184

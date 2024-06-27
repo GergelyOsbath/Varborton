@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: cced618f382a746959c84c8f2b973d7e
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/ximgproc/peilin.hpp
+  uploadId: 638184

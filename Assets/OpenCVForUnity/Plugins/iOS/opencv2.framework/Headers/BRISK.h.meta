@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: d69d3ac200f2ede46927eb7d956c18ad
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/BRISK.h
+  uploadId: 638184

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 24d53cafa6b8c4d32b7b11b7c63f7672
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/text/textDetector.hpp
+  uploadId: 638184

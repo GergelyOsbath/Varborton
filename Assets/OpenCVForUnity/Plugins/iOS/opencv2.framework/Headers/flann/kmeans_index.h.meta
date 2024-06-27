@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: fec77aa4f4c9d4f4fa2015e8f5a23800
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/flann/kmeans_index.h
+  uploadId: 638184

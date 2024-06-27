@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: d885d7f35523f144c9ddade7fecc241c
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Modules/opencv2.swiftmodule/arm64-apple-ios.swiftinterface
+  uploadId: 638184

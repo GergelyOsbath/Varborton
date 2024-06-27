@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: ba9e089a4c34f48198e57b69ce5d83b4
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/tracking/tracking.hpp
+  uploadId: 638184

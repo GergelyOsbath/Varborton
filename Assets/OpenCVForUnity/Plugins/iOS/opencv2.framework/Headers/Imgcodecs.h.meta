@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: da093eb9fc1d2dd46a576aa704d7d1b6
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/Imgcodecs.h
+  uploadId: 638184

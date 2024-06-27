@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: b2f78e806291f49849b08b6f54b8206a
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/core/cv_cpu_dispatch.h
+  uploadId: 638184

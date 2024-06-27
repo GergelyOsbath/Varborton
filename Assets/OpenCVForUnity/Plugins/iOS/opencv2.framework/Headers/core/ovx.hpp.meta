@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 34e16f7cde4d64c40b283c13a82d3790
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/core/ovx.hpp
+  uploadId: 638184

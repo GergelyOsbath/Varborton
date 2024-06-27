@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 9ffccd84a4309c64da6881c1d1864198
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/SelectiveSearchSegmentationStrategyTexture.h
+  uploadId: 638184

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: db90d69b80299e94ca6114900a1e1bb6
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/ORB.h
+  uploadId: 638184

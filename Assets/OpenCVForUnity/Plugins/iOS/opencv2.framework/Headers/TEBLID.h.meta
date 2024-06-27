@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: e8364b8f9c9f5fe4dabaed848b5b9c4e
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/TEBLID.h
+  uploadId: 638184

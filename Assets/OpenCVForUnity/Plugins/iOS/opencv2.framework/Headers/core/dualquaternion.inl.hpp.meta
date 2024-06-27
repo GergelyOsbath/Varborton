@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: f862b2f1883391246aff2d5a0f41ada9
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/core/dualquaternion.inl.hpp
+  uploadId: 638184

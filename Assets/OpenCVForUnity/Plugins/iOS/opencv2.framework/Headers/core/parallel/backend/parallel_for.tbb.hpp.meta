@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: c5f2ab3e27a855e4bad4ab2d7b9898a0
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/core/parallel/backend/parallel_for.tbb.hpp
+  uploadId: 638184

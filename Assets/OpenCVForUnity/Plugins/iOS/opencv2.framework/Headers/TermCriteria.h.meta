@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 6b83f5e164b3ce347b38b59b18b39c19
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/TermCriteria.h
+  uploadId: 638184

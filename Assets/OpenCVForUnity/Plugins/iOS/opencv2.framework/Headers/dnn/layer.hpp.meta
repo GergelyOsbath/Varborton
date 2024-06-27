@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 1515b4a5444334b52ac375fd45def719
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/dnn/layer.hpp
+  uploadId: 638184

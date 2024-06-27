@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 976953a90a88243a1bdc75eb985506df
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/face.hpp
+  uploadId: 638184

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 7fed2cda472f88648b78fe170ef09a61
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/TrainData.h
+  uploadId: 638184

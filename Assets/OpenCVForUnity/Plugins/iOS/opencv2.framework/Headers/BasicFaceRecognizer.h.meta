@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 8b03df40000c13c489c17df8f75a9012
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/BasicFaceRecognizer.h
+  uploadId: 638184

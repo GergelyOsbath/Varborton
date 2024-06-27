@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: e8e9c60eb9dc4c8499ceccd9083decc0
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/Algorithm.h
+  uploadId: 638184

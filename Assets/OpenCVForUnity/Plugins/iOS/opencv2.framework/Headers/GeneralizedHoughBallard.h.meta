@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: fbed82ac20ade394fa672d64a998e19c
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/GeneralizedHoughBallard.h
+  uploadId: 638184

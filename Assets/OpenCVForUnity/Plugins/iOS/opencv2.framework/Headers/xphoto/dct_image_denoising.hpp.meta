@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 6c4a01f2df65444908d7a7bc1f2c442f
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/xphoto/dct_image_denoising.hpp
+  uploadId: 638184

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 11b7c2304e4cb7c479f1970e95a76b71
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/MatOfPoint3.h
+  uploadId: 638184

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: ec36139037d24cd40b39aa8ae21abaf6
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/GraphicalCodeDetector.h
+  uploadId: 638184

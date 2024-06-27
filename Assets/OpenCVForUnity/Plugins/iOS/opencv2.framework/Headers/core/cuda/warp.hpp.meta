@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 57ed7cb99bf85498a83a873b03e7379f
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/core/cuda/warp.hpp
+  uploadId: 638184

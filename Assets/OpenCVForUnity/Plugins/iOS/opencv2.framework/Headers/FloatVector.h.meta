@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 9a0863887440edf4396b1f14a5a16f11
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/FloatVector.h
+  uploadId: 638184

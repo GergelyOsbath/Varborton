@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: dcedd2ef87c4a440cb43878eeff25aee
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/videostab/ring_buffer.hpp
+  uploadId: 638184

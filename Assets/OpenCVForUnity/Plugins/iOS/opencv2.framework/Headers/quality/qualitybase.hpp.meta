@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 4c4fd9007f522004dbc1d4e86e6f2a31
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/quality/qualitybase.hpp
+  uploadId: 638184

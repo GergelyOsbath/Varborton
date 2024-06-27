@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 03b83d8edf469413ea4b0f5685d62edb
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/core/cuda/common.hpp
+  uploadId: 638184

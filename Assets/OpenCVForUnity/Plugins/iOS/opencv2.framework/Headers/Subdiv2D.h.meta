@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 350155a5aaa0a9c4d9d9a56d378f7615
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/Subdiv2D.h
+  uploadId: 638184

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 26c360ba902cf46f2a2538edb49c3a10
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/core/opencl/runtime/opencl_svm_20.hpp
+  uploadId: 638184

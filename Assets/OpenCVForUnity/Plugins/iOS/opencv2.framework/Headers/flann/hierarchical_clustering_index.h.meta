@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: d52590355010d45c5b5dfddbc22ad8ca
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/flann/hierarchical_clustering_index.h
+  uploadId: 638184

@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 994e2a8415f0555408dc004bae6b6ad9
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Examples/MainModules/objdetect/FaceDetectionExample/FaceDetectionExample.unity
+  uploadId: 638184

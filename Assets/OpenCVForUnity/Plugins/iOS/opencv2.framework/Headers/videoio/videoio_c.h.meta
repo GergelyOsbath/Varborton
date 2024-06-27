@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 18f0c05acf9b74cf0b1572c59a2a0796
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/videoio/videoio_c.h
+  uploadId: 638184

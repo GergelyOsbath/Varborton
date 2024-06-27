@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: bd3f3ea3e651dff4ba75cca0d0fcaef1
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/BarcodeDetector.h
+  uploadId: 638184

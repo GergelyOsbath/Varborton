@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: f59cfe50c73ea2247ba4f548670858cf
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/BOWTrainer.h
+  uploadId: 638184

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 729dc9848ebdd419181e213f1f563ba4
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/ximgproc/fast_line_detector.hpp
+  uploadId: 638184

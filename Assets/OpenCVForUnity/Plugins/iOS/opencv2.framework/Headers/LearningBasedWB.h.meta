@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 39b5010c889f197419cedb6b0b45bff3
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/LearningBasedWB.h
+  uploadId: 638184

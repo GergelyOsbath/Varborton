@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: d7804304247342847aa1be2155c7c7a0
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/imgproc/segmentation.hpp
+  uploadId: 638184

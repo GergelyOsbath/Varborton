@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 58ef66342c1d44f2586f2ee1c67eac35
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/objdetect/objdetect.hpp
+  uploadId: 638184

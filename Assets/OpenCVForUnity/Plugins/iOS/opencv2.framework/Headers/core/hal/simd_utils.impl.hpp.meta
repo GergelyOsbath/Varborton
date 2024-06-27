@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 7b5aa9d6733d417449ffb3f7e999d9ac
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/core/hal/simd_utils.impl.hpp
+  uploadId: 638184

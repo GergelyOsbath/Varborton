@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 528c185688bf642ed9b8ca2da764e2ac
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/core/directx.hpp
+  uploadId: 638184

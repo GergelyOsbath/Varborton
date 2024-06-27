@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: b54377856ff9c4e4ebb0823ab05dc5a3
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/Float6.h
+  uploadId: 638184

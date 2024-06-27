@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 93c752f12544cbe4db99dd418b3f9295
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/SVMSGD.h
+  uploadId: 638184

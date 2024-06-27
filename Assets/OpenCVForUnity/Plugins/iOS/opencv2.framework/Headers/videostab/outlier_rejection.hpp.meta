@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 584c90873083f4c97b4bbfd25fb869fa
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/videostab/outlier_rejection.hpp
+  uploadId: 638184

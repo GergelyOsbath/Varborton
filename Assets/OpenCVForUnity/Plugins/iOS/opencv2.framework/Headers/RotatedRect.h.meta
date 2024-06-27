@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: e6b31a0bb533b5743b46b85b94f1d694
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/RotatedRect.h
+  uploadId: 638184

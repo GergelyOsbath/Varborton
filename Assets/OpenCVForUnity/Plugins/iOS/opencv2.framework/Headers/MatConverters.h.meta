@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 539b5418dc0c1a142b2609d315b5033c
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/MatConverters.h
+  uploadId: 638184

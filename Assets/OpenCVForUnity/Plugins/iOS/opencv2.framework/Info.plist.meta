@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: a5b2490e1c25f4d428ad1e7b549d2bf8
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Info.plist
+  uploadId: 638184

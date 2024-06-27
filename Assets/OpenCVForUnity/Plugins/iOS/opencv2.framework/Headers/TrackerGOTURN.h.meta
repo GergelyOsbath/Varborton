@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 32d9e6c6ac2f2d144aedccc84fe58ed6
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/TrackerGOTURN.h
+  uploadId: 638184

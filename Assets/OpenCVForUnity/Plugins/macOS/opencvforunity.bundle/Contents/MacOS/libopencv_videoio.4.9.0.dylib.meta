@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 8020171fd1f7b424880b7cd63c1cb7b2
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/macOS/opencvforunity.bundle/Contents/MacOS/libopencv_videoio.4.9.0.dylib
+  uploadId: 638184

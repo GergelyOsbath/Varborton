@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: b6688c30ac87c43ad8ac97638bb352ec
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/core/va_intel.hpp
+  uploadId: 638184

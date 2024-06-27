@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 8003e24550e324ec99cfd42ec50c2909
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/img_hash/radial_variance_hash.hpp
+  uploadId: 638184

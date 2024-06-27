@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 6a4b94f94a0924c2c8e92658ebccc226
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/face/facemark_train.hpp
+  uploadId: 638184

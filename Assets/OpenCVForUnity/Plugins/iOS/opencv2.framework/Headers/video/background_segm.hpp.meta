@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 1c5f8222cbe384b6cbf96a910cce480d
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/video/background_segm.hpp
+  uploadId: 638184

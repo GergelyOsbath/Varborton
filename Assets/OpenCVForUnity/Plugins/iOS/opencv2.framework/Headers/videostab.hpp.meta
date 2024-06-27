@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: e9b76a4992b9e45e6acc15b6eb5aab42
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/videostab.hpp
+  uploadId: 638184

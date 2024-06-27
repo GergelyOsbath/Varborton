@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: c45937567795a4523a054f3d08e3a114
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/aruco.hpp
+  uploadId: 638184

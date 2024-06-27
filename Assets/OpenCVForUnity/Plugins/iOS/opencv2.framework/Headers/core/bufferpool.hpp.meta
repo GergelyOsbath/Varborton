@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 7939b8f0a4be74faaad2bfea37aa6fe6
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/core/bufferpool.hpp
+  uploadId: 638184

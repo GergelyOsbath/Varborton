@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 8fb7ce750258f4f3fb4c1086f6ca260a
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/core/cuda/warp_shuffle.hpp
+  uploadId: 638184

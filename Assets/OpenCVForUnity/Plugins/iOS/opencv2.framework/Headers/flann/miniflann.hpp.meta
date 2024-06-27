@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 132ec6136ad5d4ca0a5a206fda18d225
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/flann/miniflann.hpp
+  uploadId: 638184

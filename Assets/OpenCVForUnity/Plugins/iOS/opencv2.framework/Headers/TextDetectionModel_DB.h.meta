@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 152aa3db8384ad649992ad34b8f99fe8
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/TextDetectionModel_DB.h
+  uploadId: 638184

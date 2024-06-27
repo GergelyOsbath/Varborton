@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: d32a3020b4bac6e4d8815dcdc4b0628a
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/AKAZE.h
+  uploadId: 638184

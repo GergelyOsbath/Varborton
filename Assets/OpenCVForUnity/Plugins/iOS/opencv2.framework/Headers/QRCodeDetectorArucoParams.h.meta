@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 089e933c529698d4fa1091b99a98e04b
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21088
+  packageName: OpenCV for Unity
+  packageVersion: 2.5.8
+  assetPath: Assets/OpenCVForUnity/Plugins/iOS/opencv2.framework/Headers/QRCodeDetectorArucoParams.h
+  uploadId: 638184
