@@ -24,7 +24,6 @@ namespace OpenCVForUnityExample
     public class HumanSegmentationPPHumanSegExample : MonoBehaviour
     {
         // Human Segmentation
-        
         /// <summary>
         /// The compose bg image toggle.
         /// </summary>
@@ -376,7 +375,7 @@ namespace OpenCVForUnityExample
                     Imgproc.cvtColor(rgbaMat_2, rgbMat, Imgproc.COLOR_RGBA2RGB);
 
 
-                    Mat blob = Dnn.blobFromImage(rgbMat, 1.0 / 255.0, new Size(192, 192), new Scalar(0.5, 0.5, 0.5), false, false, CvType.CV_32F);
+                    Mat blob = Dnn.blobFromImage(rgbMat, 1.0f / 255.0f, new Size(192, 192), new Scalar(0.5, 0.5, 0.5), false, false, CvType.CV_32F);
                     // Divide blob by std.
                     Core.divide(blob, new Scalar(0.5, 0.5, 0.5), blob);
 
@@ -389,10 +388,21 @@ namespace OpenCVForUnityExample
                     Core.reduceArgMax(prob, result, 1);
                     //result.reshape(0, new int[] { 192,192});
                     result.convertTo(result, CvType.CV_8U, 255.0);
-                    //Debug.Log("result.ToString(): " + result.ToString());
-
+                    
                     Mat mask192x192 = new Mat(192, 192, CvType.CV_8UC1, (IntPtr)result.dataAddr());
+
                     Imgproc.resize(mask192x192, maskMat, rgbaMat_2.size(), Imgproc.INTER_NEAREST);
+                    
+                    // Blur the mask to smooth the edges
+                    Imgproc.GaussianBlur(maskMat, maskMat, new Size(5, 5), 0);
+                    // Apply a threshold to create a binary mask
+                    Imgproc.threshold(maskMat, maskMat, 127, 255, Imgproc.THRESH_BINARY);
+                    // Define the structuring element for morphological operations
+                    Mat kernel = Imgproc.getStructuringElement(Imgproc.MORPH_RECT, new Size(3, 3));
+                    // Apply morphological operations to refine the edges
+                    Imgproc.morphologyEx(maskMat, maskMat, Imgproc.MORPH_CLOSE, kernel);
+                    // Release the kernel
+                    kernel.Dispose();
 
                     if (composeBGImageToggle.isOn)
                     {

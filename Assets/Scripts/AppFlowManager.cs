@@ -7,7 +7,7 @@ using Random = UnityEngine.Random;
 
 public class AppFlowManager : MonoBehaviour
 {
-    [SerializeField] private GameObject _criminalBlock;
+    [SerializeField] private GameObject _criminalBlock, _silhuette;
     [SerializeField] private TMP_Text _felony;
     [SerializeField] private RawImage _videoImage;
     private bool _faceFound;
@@ -38,12 +38,24 @@ public class AppFlowManager : MonoBehaviour
 
         if (!FaceFound && !_isResultShowing && _flowStarted)
         {
-            _lostFaceGracePeriod = StartCoroutine(FaceLostGracePeriod());
+            if (_lostFaceGracePeriod == null)
+            {
+                _lostFaceGracePeriod = StartCoroutine(FaceLostGracePeriod());
+            }
         }
         else
         {
-            if (_lostFaceGracePeriod != null) StopCoroutine(_lostFaceGracePeriod);
+            if (_lostFaceGracePeriod != null)
+            {
+                Debug.Log("Interrupted lost grace period");
+                StopCoroutine(_lostFaceGracePeriod);
+            }
         }
+    }
+
+    private void OnFaceFound()
+    {
+        
     }
     
     private IEnumerator CycleText()
@@ -63,15 +75,19 @@ public class AppFlowManager : MonoBehaviour
         _isResultShowing = true;
         yield return new WaitForSeconds(_resultOnScreenDuration);
         _isResultShowing = false;
+        _silhuette.SetActive(false);
         _criminalBlock.SetActive(false);
         _flowStarted = false;
-        _videoImage.gameObject.SetActive(true);
     }
 
     private IEnumerator FaceLostGracePeriod()
     {
         yield return new WaitForSeconds(_trackLostGracePeriod);
-        if (_flowRoutine != null) StopCoroutine(_flowRoutine);
+        if (_flowRoutine != null && _flowStarted) StopCoroutine(_flowRoutine);
+        if (_isResultShowing)
+        {
+            _silhuette.SetActive(true);
+        }
         _videoImage.gameObject.SetActive(true);
         _flowStarted = false;
         _isCycling = false;
