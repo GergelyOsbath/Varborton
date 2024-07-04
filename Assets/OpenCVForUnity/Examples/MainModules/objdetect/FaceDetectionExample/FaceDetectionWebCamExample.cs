@@ -204,8 +204,6 @@ namespace OpenCVForUnityExample
 
 
                 OpenCVForUnity.CoreModule.Rect[] rects = faces.toArray();
-
-                _appFlowManager.FaceFound = rects.Length == 1;
                 
                 for (int i = 0; i < rects.Length; i++)
                 {

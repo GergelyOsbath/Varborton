@@ -1,4 +1,6 @@
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -21,48 +23,97 @@ public class AppFlowManager : MonoBehaviour
     private float timer;
     private bool _isCycling, _flowStarted, _isResultShowing;
 
+    private float _currentTrackLostTimer, _currentResultShowingTimer;
+
     private Coroutine _flowRoutine, _lostFaceGracePeriod;
+    
+    private Queue<bool> _faceFoundHistory = new Queue<bool>();
+
+    public bool FaceDetected;
 
     public bool FaceFound
     {
         get => _faceFound;
-        set => _faceFound = value;
+        set
+        {
+            if (value == _faceFound) return;
+            _faceFound = value;
+            if (_faceFound)
+            {
+                OnFaceFound();
+            }
+            else
+            {
+                OnFaceLost(_isResultShowing);
+            }
+        }
     }
 
     private void Update()
     {
-        if (FaceFound && !_flowStarted)
+        if (_currentTrackLostTimer > 0.0f) _currentTrackLostTimer -= Time.deltaTime;
+        if (_currentResultShowingTimer > 0.0f) _currentResultShowingTimer -= Time.deltaTime;
+        
+        // Update faceFoundHistory with the current _faceFound value
+        _faceFoundHistory.Enqueue(FaceDetected);
+
+        // Limit the size of the history to fit the trackLostGracePeriod
+        int historyLength = Mathf.CeilToInt(_trackLostGracePeriod / Time.deltaTime);
+        if (_faceFoundHistory.Count > historyLength)
         {
-            _flowRoutine = StartCoroutine(CycleText());
+            _faceFoundHistory.Dequeue();
         }
 
-        if (!FaceFound && !_isResultShowing && _flowStarted)
+        // Check if all values in the history are false (face lost)
+        if (_faceFoundHistory.All(value => !value))
         {
-            if (_lostFaceGracePeriod == null)
-            {
-                _lostFaceGracePeriod = StartCoroutine(FaceLostGracePeriod());
-            }
+            FaceFound = false; // Set FaceFound to false if all history is false
         }
-        else
+        
+        if (_faceFoundHistory.All(value => value))
         {
-            if (_lostFaceGracePeriod != null)
-            {
-                Debug.Log("Interrupted lost grace period");
-                StopCoroutine(_lostFaceGracePeriod);
-            }
+            FaceFound = true; // Set FaceFound to true if all history is true
         }
+        
+        if (FaceDetected && _silhuette.activeSelf) _silhuette.SetActive(false);
     }
 
     private void OnFaceFound()
     {
-        
+        Debug.Log("FaceFound");
+        _silhuette.SetActive(false);
+        _videoImage.gameObject.SetActive(false);
+        _criminalBlock.SetActive(true);
+        _flowRoutine ??= StartCoroutine(CycleText());
+    }
+
+    private void OnFaceLost(bool isResultShowing)
+    {
+        if (isResultShowing)
+        {
+            Debug.Log("Face Lost with results showing");
+            _silhuette.SetActive(true);
+        }
+        else
+        {
+            Debug.Log("Face Lost with results not showing");
+            _videoImage.gameObject.SetActive(true);
+            _silhuette.SetActive(false);
+            _criminalBlock.SetActive(false);
+        }
+    }
+
+    private void OnResultDurationOver()
+    {
+        Debug.Log("Result duration over");
+        _flowRoutine = null;
+        _faceFoundHistory.Clear();
+        if (!FaceDetected) OnFaceLost(false);
+        else OnFaceFound();
     }
     
     private IEnumerator CycleText()
     {
-        _videoImage.gameObject.SetActive(false);
-        _flowStarted = true;
-        _criminalBlock.SetActive(true);
         _isCycling = true;
         timer = _randomizationDuration;
         while (timer > 0f)
@@ -75,22 +126,7 @@ public class AppFlowManager : MonoBehaviour
         _isResultShowing = true;
         yield return new WaitForSeconds(_resultOnScreenDuration);
         _isResultShowing = false;
-        _silhuette.SetActive(false);
-        _criminalBlock.SetActive(false);
-        _flowStarted = false;
+        OnResultDurationOver();
     }
 
-    private IEnumerator FaceLostGracePeriod()
-    {
-        yield return new WaitForSeconds(_trackLostGracePeriod);
-        if (_flowRoutine != null && _flowStarted) StopCoroutine(_flowRoutine);
-        if (_isResultShowing)
-        {
-            _silhuette.SetActive(true);
-        }
-        _videoImage.gameObject.SetActive(true);
-        _flowStarted = false;
-        _isCycling = false;
-    }
-    
 }
