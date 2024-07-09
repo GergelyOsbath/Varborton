@@ -76,6 +76,21 @@ namespace OpenCVForUnityExample
         /// The net.
         /// </summary>
         protected Net net;
+        
+        /// <summary>
+        /// The net.
+        /// </summary>
+        protected Net hsNet;
+        
+        /// <summary>
+        /// MODEL_FILENAME
+        /// </summary>
+        protected static readonly string MODEL_FILENAME = "OpenCVForUnity/dnn/human_segmentation_pphumanseg_2023mar.onnx";
+        
+        /// <summary>
+        /// The model filepath.
+        /// </summary>
+        protected string hs_model_filepath;
 
         /// <summary>
         /// The FPS monitor.
@@ -120,6 +135,12 @@ namespace OpenCVForUnityExample
                 model_filepath = Utils.getFilePath("OpenCVForUnity/dnn/" + model);
                 if (string.IsNullOrEmpty(model_filepath)) Debug.Log("The file:" + model + " did not exist in the folder “Assets/StreamingAssets/OpenCVForUnity/dnn”.");
             }
+            
+            // Human Segmentation
+            hs_model_filepath = Utils.getFilePath(MODEL_FILENAME);
+            if (string.IsNullOrEmpty(hs_model_filepath)) Debug.Log("The file:" + "OpenCVForUnity/dnn/human_segmentation_pphumanseg_2023mar.onnx" + " did not exist in the folder “Assets/StreamingAssets/OpenCVForUnity/dnn”.");
+            //Run();
+            
             Run();
 #endif
         }
@@ -207,6 +228,15 @@ namespace OpenCVForUnityExample
                 //    Debug.Log("types [" + i + "] " + outBlobTypes[i]);
                 //}
             }
+            
+            if (string.IsNullOrEmpty(hs_model_filepath))
+            {
+                Debug.LogError(MODEL_FILENAME + " is not loaded. Please read “StreamingAssets/OpenCVForUnity/dnn/setup_dnn_module.pdf” to make the necessary setup.");
+            }
+            else
+            {
+                hsNet = Dnn.readNet(hs_model_filepath);
+            }
 
 
 #if UNITY_ANDROID && !UNITY_EDITOR
@@ -221,7 +251,7 @@ namespace OpenCVForUnityExample
         /// </summary>
         public virtual void OnWebCamTextureToMatHelperInitialized()
         {
-            Debug.Log("OnWebCamTextureToMatHelperInitialized");
+            Debug.Log("Base OnWebCamTextureToMatHelperInitialized");
 
             Mat webCamTextureMat = webCamTextureToMatHelper.GetMat();
 
@@ -255,7 +285,7 @@ namespace OpenCVForUnityExample
                 Camera.main.orthographicSize = height / 2;
             }
 
-
+            Debug.Log("Setting Bgrmat");
             bgrMat = new Mat(webCamTextureMat.rows(), webCamTextureMat.cols(), CvType.CV_8UC3);
         }
 
