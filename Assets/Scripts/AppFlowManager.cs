@@ -44,7 +44,7 @@ public class AppFlowManager : MonoBehaviour
             }
             else
             {
-                OnFaceLost(_isResultShowing);
+                OnFaceLost();
             }
         }
     }
@@ -87,20 +87,10 @@ public class AppFlowManager : MonoBehaviour
         _flowRoutine ??= StartCoroutine(CycleText());
     }
 
-    private void OnFaceLost(bool isResultShowing)
+    private void OnFaceLost()
     {
-        if (isResultShowing)
-        {
-            Debug.Log("Face Lost with results showing");
-            _silhuette.SetActive(true);
-        }
-        else
-        {
-            Debug.Log("Face Lost with results not showing");
-            _videoImage.gameObject.SetActive(true);
-            _silhuette.SetActive(false);
-            _criminalBlock.SetActive(false);
-        }
+        Debug.Log("FaceLost");
+        _silhuette.SetActive(true);
     }
 
     private void OnResultDurationOver()
@@ -108,7 +98,12 @@ public class AppFlowManager : MonoBehaviour
         Debug.Log("Result duration over");
         _flowRoutine = null;
         _faceFoundHistory.Clear();
-        if (!FaceDetected) OnFaceLost(false);
+        if (!FaceDetected)
+        {
+            _videoImage.gameObject.SetActive(true);
+            _silhuette.SetActive(false);
+            _criminalBlock.SetActive(false);
+        }
         else OnFaceFound();
     }
     

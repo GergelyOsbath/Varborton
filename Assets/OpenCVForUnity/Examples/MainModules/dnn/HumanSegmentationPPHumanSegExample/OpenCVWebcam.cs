@@ -316,6 +316,8 @@ namespace OpenCVForUnityExample
 
                     Imgproc.resize(mask192x192, maskMat, rgbaMat_2.size(), Imgproc.INTER_NEAREST);
                     
+                    // Edge blurring
+                    /*
                     // Blur the mask to smooth the edges
                     Imgproc.GaussianBlur(maskMat, maskMat, new Size(5, 5), 0);
                     // Apply a threshold to create a binary mask
@@ -326,6 +328,7 @@ namespace OpenCVForUnityExample
                     Imgproc.morphologyEx(maskMat, maskMat, Imgproc.MORPH_CLOSE, kernel);
                     // Release the kernel
                     kernel.Dispose();
+                    */
 
                     if (composeBGImageToggle.isOn)
                     {
@@ -383,7 +386,6 @@ namespace OpenCVForUnityExample
             scores.copyTo(confidences_m);
 
             Dnn.NMSBoxes(boxes, confidences, confThreshold, nmsThreshold, indices, 1f, keep_top_k);
-
 
             if (indices.total() >= 1) _appFlowManager.FaceDetected = true;
             else _appFlowManager.FaceDetected = false;
@@ -562,8 +564,6 @@ namespace OpenCVForUnityExample
                     ones_0_2 = ones.colRange(0, 2);
                     bbox_scale = scale.colRange(0, 4);
                     landmark_scale = scale.colRange(0, 2);
-                    
-                    Debug.Log(scores.get(0,0));
                     
                 }
 
