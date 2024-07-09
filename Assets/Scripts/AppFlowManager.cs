@@ -14,11 +14,13 @@ public class AppFlowManager : MonoBehaviour
     [SerializeField] private RawImage _videoImage;
     private bool _faceFound;
 
+    /*
     private string[] texts = new[] {"Bűn #1", "Bűn #2", "Bűn #3", "Bűn #4", "Bűn #5", "Bűn #6", "Bűn #7", "Bűn #8", "Bűn #9", "Bűn #10"};
     [SerializeField] private float _timeBetweenRandomPicks = 0.5f; // Time between text changes (in seconds)
     [SerializeField] private float _randomizationDuration = 10.0f; // Total duration for cycling text (in seconds)
     [SerializeField] private float _resultOnScreenDuration = 10.0f; // Total duration for cycling text (in seconds)
     [SerializeField] private float _trackLostGracePeriod = 1.0f; // Total duration for cycling text (in seconds)
+    */
     
     private float timer;
     private bool _isCycling, _flowStarted, _isResultShowing;
@@ -58,7 +60,7 @@ public class AppFlowManager : MonoBehaviour
         _faceFoundHistory.Enqueue(FaceDetected);
 
         // Limit the size of the history to fit the trackLostGracePeriod
-        int historyLength = Mathf.CeilToInt(_trackLostGracePeriod / Time.deltaTime);
+        int historyLength = Mathf.CeilToInt(ConfigHandler.TrackLostGracePeriod / Time.deltaTime);
         if (_faceFoundHistory.Count > historyLength)
         {
             _faceFoundHistory.Dequeue();
@@ -110,16 +112,16 @@ public class AppFlowManager : MonoBehaviour
     private IEnumerator CycleText()
     {
         _isCycling = true;
-        timer = _randomizationDuration;
+        timer = ConfigHandler.RandomizationDuration;
         while (timer > 0f)
         {
-            _felony.text = texts[Random.Range(0, texts.Length)];
-            yield return new WaitForSeconds(_timeBetweenRandomPicks);
-            timer -= _timeBetweenRandomPicks;
+            _felony.text = ConfigHandler.FelonyTexts[Random.Range(0, ConfigHandler.FelonyTexts.Length)];
+            yield return new WaitForSeconds(ConfigHandler.TimeBetweenRandomPicks);
+            timer -= ConfigHandler.TimeBetweenRandomPicks;
         }
         _isCycling = false;
         _isResultShowing = true;
-        yield return new WaitForSeconds(_resultOnScreenDuration);
+        yield return new WaitForSeconds(ConfigHandler.ResultOnScreenDuration);
         _isResultShowing = false;
         OnResultDurationOver();
     }
