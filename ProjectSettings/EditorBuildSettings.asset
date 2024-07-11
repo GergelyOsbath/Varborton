@@ -5,8 +5,11 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/OpenCVForUnity/Examples/MainModules/dnn/HumanSegmentationPPHumanSegExample/Varborton.unity
     guid: c9ea2191a057e38429b72e10eda0770e
+  - enabled: 1
+    path: Assets/YOLOv8WithOpenCVForUnityExample/YOLOv8SegmentationExample/YOLOv8SegmentationExample.unity
+    guid: c900433d2893b0f438996dceb8f3ef83
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

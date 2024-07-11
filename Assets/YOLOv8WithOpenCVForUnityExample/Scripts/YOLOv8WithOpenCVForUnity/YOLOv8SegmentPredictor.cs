@@ -55,6 +55,8 @@ namespace YOLOv8WithOpenCVForUnity
         public DetectionData firstPersonData;
         public Mat cumulativeMask;
 
+        private bool _personDetected;
+
         public YOLOv8SegmentPredictor(string modelFilepath, string classesFilepath, Size inputSize, float confThreshold = 0.25f, float nmsThreshold = 0.45f, int topK = 300, bool upsample = true, int backend = Dnn.DNN_BACKEND_OPENCV, int target = Dnn.DNN_TARGET_CPU)
         {
             // initialize
@@ -451,6 +453,11 @@ namespace YOLOv8WithOpenCVForUnity
             return masks;// [n, 160, 160]
         }
 
+        public bool FirstPersonDetected()
+        {
+            return firstPersonData.x1 != 0 && firstPersonData.x2 != 0 && firstPersonData.y1 != 0 && firstPersonData.y2 != 0;
+        }
+
         public virtual void visualize(Mat image, Mat results, bool print_results = false, bool isRGB = false)
         {
             if (image.IsDisposed)
@@ -464,9 +471,30 @@ namespace YOLOv8WithOpenCVForUnity
             //List<DetectionData> filteredData = data.Take(1).ToList(); // Assuming first element is the person
             //List<DetectionDataWithID> filteredData = data.Where(d => getClassLabel(d.cls).Equals("person")).Take(1).ToList();
             
-            firstPersonData = data.FirstOrDefault(d => d.cls == 0); // More concise for single element
-
+            //firstPersonData = data.FirstOrDefault(d => d.cls == 0);
+            
             List<DetectionData> filteredData = new List<DetectionData>();
+
+            Point center = new Point(image.width() / 2f, image.height() / 2f);
+            double minDistance = double.MaxValue;
+            DetectionData nearestPerson = new DetectionData();
+            foreach (var d in data)
+            {
+                if (d.cls != 0) continue;
+                float centerX = (d.x1 + d.x2) / 2f;
+                float centerY = (d.y1 + d.y2) / 2f;
+                Point detectionCenter = new Point(centerX, centerY);
+                double distance = Math.Sqrt(Math.Pow(center.x - detectionCenter.x, 2) + Math.Pow(center.y - detectionCenter.y, 2));
+
+                if (distance < minDistance)
+                {
+                    minDistance = distance;
+                    nearestPerson = d;
+                }
+            }
+
+            firstPersonData = nearestPerson;
+
             foreach (var d in data)
             {
                 float left = d.x1;
@@ -485,7 +513,6 @@ namespace YOLOv8WithOpenCVForUnity
                 //Debug.Log($"{getClassLabel(classId)} : {det_left} AND {left} -> {det_left >= left} && {det_top >= top} && {det_right <= right} && {det_bottom <= bottom}");
                 if (det_left <= left && det_top <= top && det_right >= right && det_bottom >= bottom)
                 {
-                    Debug.Log($"Added {d.cls} to filtered data");
                     filteredData.Add(d);
                 }
             }

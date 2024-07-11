@@ -48,6 +48,8 @@ namespace YOLOv8WithOpenCVForUnityExample
         [TooltipAttribute("Preprocess input image by resizing to a specific height.")]
         public int inpHeight = 640;
 
+        public AppFlowManager AppFlowManager;
+
         [Header("TEST")]
 
         [TooltipAttribute("Path to test input image.")]
@@ -95,6 +97,8 @@ namespace YOLOv8WithOpenCVForUnityExample
         /// The background image texture.
         /// </summary>
         public Texture2D backGroundImageTexture;
+
+        public YOLOv8SegmentPredictor.DetectionData CurrentDetectedPerson;
 
 #if UNITY_WEBGL
         protected IEnumerator getFilePath_Coroutine;
@@ -346,7 +350,10 @@ namespace YOLOv8WithOpenCVForUnityExample
                     Imgproc.cvtColor(bgrMat, rgbaMat, Imgproc.COLOR_BGR2RGBA);
 
                     segmentPredictor.visualize_mask(rgbaMat, results[0], results[1], 0.5f, true);
-                    segmentPredictor.visualize(rgbaMat, results[0], true, true);
+                    segmentPredictor.visualize(rgbaMat, results[0], false, true);
+
+                    if (segmentPredictor.FirstPersonDetected()) AppFlowManager.FaceDetected = true;
+                    else AppFlowManager.FaceDetected = false;
 
                     if (segmentPredictor.cumulativeMask != null)
                     {

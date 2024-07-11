@@ -570,6 +570,11 @@ namespace OpenCVForUnity.UnityUtils.Helper
 
             // Creates the camera
             var devices = WebCamTexture.devices;
+
+            foreach (WebCamDevice camDevice in devices)
+            {
+                Debug.Log(camDevice.name);
+            }
             if (!String.IsNullOrEmpty(requestedDeviceName))
             {
                 int requestedDeviceIndex = -1;
