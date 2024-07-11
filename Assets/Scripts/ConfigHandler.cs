@@ -29,7 +29,7 @@ public class ConfigHandler : MonoBehaviour
             return;
         }
 
-        FelonyTexts = fileContent[0].Split(',');
+        FelonyTexts = fileContent[0].Split(';');
         TimeBetweenRandomPicks = float.Parse(fileContent[1].Split('=')[1].Trim(), NumberStyles.Any, CultureInfo.InvariantCulture);
         RandomizationDuration = float.Parse(fileContent[2].Split('=')[1].Trim(), NumberStyles.Any, CultureInfo.InvariantCulture);
         ResultOnScreenDuration = float.Parse(fileContent[3].Split('=')[1].Trim(), NumberStyles.Any, CultureInfo.InvariantCulture);

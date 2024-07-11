@@ -317,7 +317,6 @@ namespace OpenCVForUnityExample
                     Imgproc.resize(mask192x192, maskMat, rgbaMat_2.size(), Imgproc.INTER_NEAREST);
                     
                     // Edge blurring
-                    /*
                     // Blur the mask to smooth the edges
                     Imgproc.GaussianBlur(maskMat, maskMat, new Size(5, 5), 0);
                     // Apply a threshold to create a binary mask
@@ -328,7 +327,6 @@ namespace OpenCVForUnityExample
                     Imgproc.morphologyEx(maskMat, maskMat, Imgproc.MORPH_CLOSE, kernel);
                     // Release the kernel
                     kernel.Dispose();
-                    */
 
                     if (composeBGImageToggle.isOn)
                     {
