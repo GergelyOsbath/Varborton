@@ -7,6 +7,7 @@ using UnityEngine;
 public class ConfigHandler : MonoBehaviour
 {
     public static string[] FelonyTexts { get; private set; } = {"Bűn #1", "Bűn #2", "Bűn #3", "Bűn #4", "Bűn #5", "Bűn #6", "Bűn #7", "Bűn #8", "Bűn #9", "Bűn #10"};
+    public static string BackgroundFileName { get; private set; } = "varborton_bg_1920x1080.png";
     public static float TimeBetweenRandomPicks { get; private set; } = 0.1f;
     public static float RandomizationDuration { get; private set; } = 3.0f;
     public static float ResultOnScreenDuration { get; private set; } = 10.0f;
@@ -23,7 +24,7 @@ public class ConfigHandler : MonoBehaviour
         string[] fileContent = File.ReadAllLines(path);
 
 
-        if (fileContent.Length < 4)
+        if (fileContent.Length < 6)
         {
             Debug.Log($"Config file bad!");
             return;
@@ -34,5 +35,6 @@ public class ConfigHandler : MonoBehaviour
         RandomizationDuration = float.Parse(fileContent[2].Split('=')[1].Trim(), NumberStyles.Any, CultureInfo.InvariantCulture);
         ResultOnScreenDuration = float.Parse(fileContent[3].Split('=')[1].Trim(), NumberStyles.Any, CultureInfo.InvariantCulture);
         TrackLostGracePeriod = float.Parse(fileContent[4].Split('=')[1].Trim(), NumberStyles.Any, CultureInfo.InvariantCulture);
+        BackgroundFileName = fileContent[5].Split('=')[1].Trim();
     }
 }
