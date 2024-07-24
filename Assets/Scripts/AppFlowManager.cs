@@ -9,7 +9,7 @@ using Random = UnityEngine.Random;
 
 public class AppFlowManager : MonoBehaviour
 {
-    [SerializeField] private GameObject _criminalBlock, _silhuette;
+    [SerializeField] private GameObject _criminalBlock, _silhuette, _fakeBGWithSilhuette;
     [SerializeField] private TMP_Text _felony;
     [SerializeField] private RawImage _videoImage;
     private bool _faceFound;
@@ -76,14 +76,19 @@ public class AppFlowManager : MonoBehaviour
         {
             FaceFound = true; // Set FaceFound to true if all history is true
         }
-        
-        if (FaceDetected && _silhuette.activeSelf) _silhuette.SetActive(false);
+
+        if (FaceDetected && _silhuette.activeSelf)
+        {
+            _silhuette.SetActive(false);
+            _fakeBGWithSilhuette.SetActive(true);
+        }
     }
 
     private void OnFaceFound()
     {
         Debug.Log("FaceFound");
         _silhuette.SetActive(false);
+        _fakeBGWithSilhuette.SetActive(true);
         _videoImage.gameObject.SetActive(false);
         _criminalBlock.SetActive(true);
         _flowRoutine ??= StartCoroutine(CycleText());
@@ -93,6 +98,7 @@ public class AppFlowManager : MonoBehaviour
     {
         Debug.Log("FaceLost");
         _silhuette.SetActive(true);
+        _fakeBGWithSilhuette.SetActive(false);
     }
 
     private void OnResultDurationOver()
@@ -104,6 +110,7 @@ public class AppFlowManager : MonoBehaviour
         {
             _videoImage.gameObject.SetActive(true);
             _silhuette.SetActive(false);
+            _fakeBGWithSilhuette.SetActive(true);
             _criminalBlock.SetActive(false);
         }
         else OnFaceFound();

@@ -5,8 +5,6 @@ using OpenCVForUnity.ImgprocModule;
 using OpenCVForUnity.ObjdetectModule;
 using OpenCVForUnity.UnityUtils;
 using OpenCVForUnity.UnityUtils.Helper;
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using UnityEngine;
@@ -23,6 +21,7 @@ namespace OpenCVForUnityExample
     [RequireComponent(typeof(WebCamTextureToMatHelper))]
     public class FaceDetectorYNWebCamExample : MonoBehaviour
     {
+        public AppFlowManager AppFlowManager;
         /// <summary>
         /// The FaceDetectorYN.
         /// </summary>
@@ -130,8 +129,6 @@ namespace OpenCVForUnityExample
                 faceDetector = FaceDetectorYN.create(fd_modelPath, "", new Size(inputSizeW, inputSizeH), scoreThreshold, nmsThreshold, topK);
             }
 
-
-
 #if UNITY_ANDROID && !UNITY_EDITOR
             // Avoids the front camera low light issue that occurs in only some Android devices (e.g. Google Pixel, Pixel2).
             webCamTextureToMatHelper.avoidAndroidFrontCameraLowLightIssue = true;
@@ -235,11 +232,18 @@ namespace OpenCVForUnityExample
                 Imgproc.cvtColor(rgbaMat, bgrMat, Imgproc.COLOR_RGBA2BGR);
 
                 Detection[] detections = Detect(bgrMat);
+                
+                //Debug.Log(detections.Length);
+                
+                if (detections.Length > 0) AppFlowManager.FaceDetected = true;
+                else AppFlowManager.FaceDetected = false;
 
+                /*
                 foreach (var d in detections)
                 {
                     DrawDetection(d, rgbaMat);
                 }
+                */
 
                 Utils.matToTexture2D(rgbaMat, texture);
             }
@@ -348,7 +352,30 @@ namespace OpenCVForUnityExample
                 }
             }
 
-            return detections;
+            // Define the central rectangle
+            int centerX = image.width() / 2;
+            int centerY = image.height() / 2;
+            int rectWidth = image.width() / 2; // You can adjust the size of the rectangle
+            int rectHeight = image.height(); // You can adjust the size of the rectangle
+            int rectX = centerX - rectWidth / 2;
+            int rectY = centerY - rectHeight / 2;
+            
+            // 320, 240, 213, 160, 214, 160
+            
+            //Debug.Log($"{centerX}, {centerY}, {rectWidth}, {rectHeight}, {rectX}, {rectY}");
+
+            List<Detection> filteredDetections = new List<Detection>();
+
+            foreach (var d in detections)
+            {
+                //Debug.Log($"{d.xy.x}, {d.xy.y}, {d.xy.x + d.wh.x}, {d.xy.y + d.wh.y}");
+                if (d.xy.x >= rectX && d.xy.y >= rectY && (d.xy.x + d.wh.x) <= (rectX + rectWidth) && (d.xy.y + d.wh.y) <= (rectY + rectHeight))
+                {
+                    filteredDetections.Add(d);
+                }
+            }
+
+            return filteredDetections.ToArray();
         }
 
         protected virtual void DrawDetection(Detection d, Mat frame)

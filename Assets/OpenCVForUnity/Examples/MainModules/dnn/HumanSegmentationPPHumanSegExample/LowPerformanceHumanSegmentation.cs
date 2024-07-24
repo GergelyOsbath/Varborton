@@ -297,6 +297,11 @@ namespace OpenCVForUnityExample
                 {
                     Debug.Log("Human detected!");
                     // Perform further actions as needed
+                    AppflowManager.FaceDetected = true;
+                }
+                else
+                {
+                    AppflowManager.FaceDetected = false;
                 }
 
 

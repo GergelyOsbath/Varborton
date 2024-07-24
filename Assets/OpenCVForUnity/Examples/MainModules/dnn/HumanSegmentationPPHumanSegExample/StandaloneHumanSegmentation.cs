@@ -184,7 +184,7 @@ namespace OpenCVForUnityExample
             }
 
             rgbMat = new Mat(webCamTextureMat.rows(), webCamTextureMat.cols(), CvType.CV_8UC3);
-            maskMat = new Mat(webCamTextureMat.rows(), webCamTextureMat.cols(), CvType.CV_8UC1);
+            maskMat = new Mat(webCamTextureMat.rows(), webCamTextureMat.cols() * 2, CvType.CV_8UC1);
 
             bgMaskMat = new Mat(webCamTextureMat.rows(), webCamTextureMat.cols(), CvType.CV_8UC1);
             backGroundImageMat = new Mat(webCamTextureMat.size(), CvType.CV_8UC4, new Scalar(39, 255, 86, 255));
@@ -268,25 +268,35 @@ namespace OpenCVForUnityExample
                     //Debug.Log("result.ToString(): " + result.ToString());
 
                     Mat mask192x192 = new Mat(192, 192, CvType.CV_8UC1, (IntPtr)result.dataAddr());
-                    Imgproc.resize(mask192x192, maskMat, rgbaMat.size(), Imgproc.INTER_NEAREST);
-
+                    Imgproc.resize(mask192x192, maskMat, rgbaMat.size(), Imgproc.INTER_LANCZOS4);
+                    
                     // Edge blurring
                     // Blur the mask to smooth the edges
-                    //Imgproc.bilateralFilter(maskMat, maskMat, 9, 75, 75);
                     Imgproc.GaussianBlur(maskMat, maskMat, new Size(5, 5), 0);
+
                     // Apply a threshold to create a binary mask
                     Imgproc.threshold(maskMat, maskMat, 127, 255, Imgproc.THRESH_BINARY);
+
                     // Define the structuring element for morphological operations
                     Mat kernel = Imgproc.getStructuringElement(Imgproc.MORPH_RECT, new Size(3, 3));
+
                     // Apply morphological operations to refine the edges
                     Imgproc.morphologyEx(maskMat, maskMat, Imgproc.MORPH_CLOSE, kernel);
+                    Imgproc.morphologyEx(maskMat, maskMat, Imgproc.MORPH_OPEN, kernel);
+
                     // Release the kernel
                     kernel.Dispose();
+                    
+                    List<MatOfPoint> contours = new List<MatOfPoint>();
+                    Mat hierarchy = new Mat();
+                    Imgproc.findContours(maskMat, contours, hierarchy, Imgproc.RETR_EXTERNAL, Imgproc.CHAIN_APPROX_SIMPLE);
+                    Imgproc.drawContours(maskMat, contours, -1, new Scalar(255, 255, 255), 2);
 
                     if (composeBGImageToggle.isOn)
                     {
                         // Compose the background image.
                         Core.bitwise_not(maskMat, bgMaskMat);
+                        //Imgproc.bilateralFilter(bgMaskMat,maskMat,9,150,150, Core.BORDER_WRAP);
                         backGroundImageMat.copyTo(rgbaMat, bgMaskMat);
                     }
 

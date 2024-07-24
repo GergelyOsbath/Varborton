@@ -6,13 +6,13 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/OpenCVForUnity/Examples/MainModules/dnn/HumanSegmentationPPHumanSegExample/Varborton.unity
+    path: Assets/Scenes/VarbortonFaceRecogniton.unity
     guid: c9ea2191a057e38429b72e10eda0770e
   - enabled: 0
-    path: Assets/YOLOv8WithOpenCVForUnityExample/YOLOv8SegmentationExample/YOLOv8SegmentationExample.unity
+    path: Assets/Scenes/VarbortonHighQuality.unity
     guid: c900433d2893b0f438996dceb8f3ef83
   - enabled: 1
-    path: Assets/OpenCVForUnity/Examples/MainModules/dnn/HumanSegmentationPPHumanSegExample/VarbortonStandaloneHumanSegmentation.unity
+    path: Assets/Scenes/VarbortonStandaloneHumanSegmentation.unity
     guid: 5c9745a0c179fde4191dce65e1b49eab
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
