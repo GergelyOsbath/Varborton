@@ -1452,10 +1452,10 @@ MonoBehaviour:
   alignment: 1
   offset: {x: 10, y: 10}
   boxVisible: 1
-  boxWidth: 200
-  boxHeight: 110
+  boxWidth: 90
+  boxHeight: 30
   padding: {x: 8, y: 5}
-  consoleHeight: 50
+  consoleHeight: 10
 --- !u!1 &1211686401
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Rect = OpenCVForUnity.CoreModule.Rect;
 
 namespace OpenCVForUnityExample
 {
@@ -231,7 +232,7 @@ namespace OpenCVForUnityExample
 
                 Imgproc.cvtColor(rgbaMat, bgrMat, Imgproc.COLOR_RGBA2BGR);
 
-                Detection[] detections = Detect(bgrMat);
+                Detection[] detections = Detect(bgrMat, rgbaMat);
                 
                 //Debug.Log(detections.Length);
                 
@@ -309,7 +310,7 @@ namespace OpenCVForUnityExample
             webCamTextureToMatHelper.requestedIsFrontFacing = !webCamTextureToMatHelper.requestedIsFrontFacing;
         }
 
-        protected virtual Detection[] Detect(Mat image)
+        protected virtual Detection[] Detect(Mat image, Mat frame)
         {
             Imgproc.resize(image, inputMat, inputMat.size());
 
@@ -359,6 +360,11 @@ namespace OpenCVForUnityExample
             int rectHeight = image.height(); // You can adjust the size of the rectangle
             int rectX = centerX - rectWidth / 2;
             int rectY = centerY - rectHeight / 2;
+            
+            /*
+            Rect centralRect = new Rect(rectX, rectY, rectWidth, rectHeight);
+            Imgproc.rectangle(frame, centralRect, new Scalar(0, 255, 0, 255), 2);
+            */
             
             // 320, 240, 213, 160, 214, 160
             

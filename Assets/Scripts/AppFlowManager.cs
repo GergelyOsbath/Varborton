@@ -77,11 +77,13 @@ public class AppFlowManager : MonoBehaviour
             FaceFound = true; // Set FaceFound to true if all history is true
         }
 
+        /*
         if (FaceDetected && _silhuette.activeSelf)
         {
             _silhuette.SetActive(false);
             _fakeBGWithSilhuette.SetActive(true);
         }
+        */
     }
 
     private void OnFaceFound()
