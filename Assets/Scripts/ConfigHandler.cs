@@ -18,6 +18,7 @@ public class ConfigHandler : MonoBehaviour
     public static float FaceDetectionCenterWidthMax { get; private set; } = 0.60f;
     public static float FaceDetectionCenterHeightMin { get; private set; } = 0.15f;
     public static float FaceDetectionCenterHeightMax { get; private set; } = 0.85f;
+    public static float LevelChangeThreshold { get; private set; } = 0.1f;
     public static int RestartHour { get; private set; } = 4;
     public static int RestartMinute { get; private set; } = 30;
     public static int RestartSecond { get; private set; } = 30;
@@ -58,5 +59,6 @@ public class ConfigHandler : MonoBehaviour
         FaceDetectionCenterHeightMin = float.Parse(fileContent[14].Split('=')[1].Trim(), NumberStyles.Any, CultureInfo.InvariantCulture);
         FaceDetectionCenterHeightMax = float.Parse(fileContent[15].Split('=')[1].Trim(), NumberStyles.Any, CultureInfo.InvariantCulture);
         RestartEveryXHour = fileContent[16].Contains("true", StringComparison.InvariantCultureIgnoreCase);
+        LevelChangeThreshold = float.Parse(fileContent[17].Split('=')[1].Trim(), NumberStyles.Any, CultureInfo.InvariantCulture);
     }
 }

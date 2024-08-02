@@ -22,13 +22,20 @@ public class Restarter : MonoBehaviour
 		DateTime now = DateTime.Now;
 		_currentTimeText.text = now.ToString(CultureInfo.InvariantCulture);
 		//Debug.Log($"{now.Hour} -> {_restartHour} : {now.Minute} -> {_restartMinute} : {now.Second} -> {_restartSecond}");
-		if (ConfigHandler.RestartEveryXHour)
+		if (ConfigHandler.DebugEnabled)
 		{
-			if (now.Hour % ConfigHandler.RestartHour == 0 && now.Minute == ConfigHandler.RestartMinute && now.Second == ConfigHandler.RestartSecond) RestartApp();
+			if (now.Minute % ConfigHandler.RestartMinute == 0 && now.Second == ConfigHandler.RestartSecond) RestartApp();
 		}
 		else
 		{
-			if (now.Hour == ConfigHandler.RestartHour && now.Minute == ConfigHandler.RestartMinute && now.Second == ConfigHandler.RestartSecond) RestartApp();
+			if (ConfigHandler.RestartEveryXHour)
+			{
+				if (now.Hour % ConfigHandler.RestartHour == 0 && now.Minute == ConfigHandler.RestartMinute && now.Second == ConfigHandler.RestartSecond) RestartApp();
+			}
+			else
+			{
+				if (now.Hour == ConfigHandler.RestartHour && now.Minute == ConfigHandler.RestartMinute && now.Second == ConfigHandler.RestartSecond) RestartApp();
+			}
 		}
 	}
 	private void RestartApp()

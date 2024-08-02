@@ -25,6 +25,7 @@ namespace OpenCVForUnityExample
         public int keep_top_k = 750;
 
         private float previousMoveDistance = 0;
+        private float previousPositionOfTop;
 
         protected Scalar[] pointsColors = new Scalar[] {
             new Scalar(0, 0, 255, 255), // # right eye
@@ -177,6 +178,7 @@ namespace OpenCVForUnityExample
             float minBoxHeight = frame.height() * ConfigHandler.FaceDetectionMinHeight; // Example: 10% of the frame height
 
             float topOfDetectedFace = 0;
+            bool diffIsEnough = false;
 
             // # Draw boudning boxes and landmarks on the original image
             for (int i = 0; i < indices.total(); ++i)
@@ -187,14 +189,14 @@ namespace OpenCVForUnityExample
                 bboxes.get(idx, 0, bbox_arr);
                 float[] confidence_arr = new float[1];
                 confidences.get(idx, 0, confidence_arr);
-                //drawPred(0, confidence_arr[0], bbox_arr[0], bbox_arr[1], bbox_arr[0] + bbox_arr[2], bbox_arr[1] + bbox_arr[3], frame);
+                if (ConfigHandler.DebugEnabled) drawPred(0, confidence_arr[0], bbox_arr[0], bbox_arr[1], bbox_arr[0] + bbox_arr[2], bbox_arr[1] + bbox_arr[3], frame);
 
                 Mat landmarks = dets.colRange(4, 14);
                 float[] landmarks_arr = new float[10];
                 landmarks.get(idx, 0, landmarks_arr);
                 Point[] points = new Point[] { new Point(landmarks_arr[0], landmarks_arr[1]), new Point(landmarks_arr[2], landmarks_arr[3]),
                     new Point(landmarks_arr[4], landmarks_arr[5]), new Point(landmarks_arr[6], landmarks_arr[7]), new Point(landmarks_arr[8], landmarks_arr[9])};
-                //drawPredPoints(points, frame);
+                if (ConfigHandler.DebugEnabled) drawPredPoints(points, frame);
                 
                 // Check if the detected face is in the middle of the screen
                 float centerX = bbox_arr[0] + bbox_arr[2] / 2;
@@ -208,6 +210,11 @@ namespace OpenCVForUnityExample
                     boxWidth > minBoxWidth && boxHeight > minBoxHeight)
                 {
                     topOfDetectedFace = bbox_arr[1];
+                    //Debug.Log(topOfDetectedFace);
+                    //Debug.Log(previousPositionOfTop);
+                    //Debug.Log(Mathf.Abs(topOfDetectedFace - previousPositionOfTop));
+                    if (Mathf.Abs(topOfDetectedFace - previousPositionOfTop) > ConfigHandler.LevelChangeThreshold) diffIsEnough = true;
+                    previousPositionOfTop = topOfDetectedFace;
                     faceDetectedInMiddle = true;
                 }
                 
@@ -215,19 +222,59 @@ namespace OpenCVForUnityExample
 
             if (faceDetectedInMiddle)
             {
-                Debug.Log($"{topOfDetectedFace} : {screenMidY}");
-                if (topOfDetectedFace > screenMidY)
+                //Debug.Log($"{topOfDetectedFace} : {screenMidY} : {frame.height() * 0.25f}");
+                
+                if (topOfDetectedFace > screenMidY && diffIsEnough)
                 {
+                    //Debug.Log("UppestLevel");
+                    targetObject.transform.position = new Vector3(0, frame.height() * 0.25f, 0);
+                    /*
+                    if (topOfDetectedFace > screenMidY * 1.15f && diffIsEnough)
+                    {
+                        
+                        
+                        //Debug.Log("UpperLevel");
+                        targetObject.transform.position = new Vector3(0, frame.height() * 0.35f, 0);
+                        if (topOfDetectedFace > screenMidY * 1.20f && diffIsEnough)
+                        {
+                            //Debug.Log("LowerLevel");
+                            targetObject.transform.position = new Vector3(0, frame.height() * 0.45f, 0);
+                            if (topOfDetectedFace > screenMidY * 1.25f && diffIsEnough)
+                            {
+                                //Debug.Log("LowestLevel");
+                                targetObject.transform.position = new Vector3(0, frame.height() * 0.55f, 0);
+                            }
+                        }
+                        
+                    }
+                    */
+                    /*
                     float moveDistance = topOfDetectedFace - screenMidY;
                     if (previousMoveDistance < moveDistance)
                     {
                         previousMoveDistance = moveDistance;
-                        if (targetObject.gameObject.transform.position.y < 140.0f) targetObject.transform.position = new Vector3(0, moveDistance * 3.5f, 0);
-                        else targetObject.gameObject.transform.position = new Vector3(0, 140.0f, 0);
-                    }
+                        if (targetObject.gameObject.transform.position.y < frame.height() * 0.13f)
+                        {
+                            targetObject.transform.position = new Vector3(0, targetObject.transform.position.y + moveDistance * 3.0f, 0);
+                        }
+                        else
+                        {
+                            targetObject.gameObject.transform.position = new Vector3(0, frame.height() * 0.13f, 0);
+                        }
+                        */
+                    /*
+                    if (targetObject.gameObject.transform.position.y < frame.height() * 0.13f) targetObject.transform.position = new Vector3(0, moveDistance * 3.5f, 0);
+                    else targetObject.gameObject.transform.position = new Vector3(0, frame.height() * 0.13f, 0);
+                }
+                */
+                    //if (targetObject.transform.position.y > frame.height() * 0.13f) targetObject.transform.position = Vector3.zero;
+                }else if (diffIsEnough)
+                {
+                    targetObject.transform.position = Vector3.zero;
                 }
 
-                //if (targetObject.transform.position.y > 140) targetObject.transform.position = Vector3.zero;
+                //Debug.Log($"y pos: {targetObject.transform.position.y}");
+                //if (targetObject.transform.position.y > frame.height() * 0.3f) targetObject.transform.position = Vector3.zero;
                 /*
                 float moveDistance = topOfDetectedFace - screenMidY;
                 Vector3 newPosition = targetObject.transform.position;
