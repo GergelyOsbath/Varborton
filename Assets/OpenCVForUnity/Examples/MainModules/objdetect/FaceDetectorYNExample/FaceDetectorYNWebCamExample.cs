@@ -239,12 +239,12 @@ namespace OpenCVForUnityExample
                 if (detections.Length > 0) AppFlowManager.FaceDetected = true;
                 else AppFlowManager.FaceDetected = false;
 
-                /*
+                
                 foreach (var d in detections)
                 {
                     DrawDetection(d, rgbaMat);
                 }
-                */
+                
 
                 Utils.matToTexture2D(rgbaMat, texture);
             }

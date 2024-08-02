@@ -14,8 +14,11 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/VarbortonStandaloneHumanSegmentation.unity
     guid: 5c9745a0c179fde4191dce65e1b49eab
-  - enabled: 1
-    path: Assets/OpenCVForUnity/Examples/MainModules/objdetect/FaceDetectorYNExample/FaceDetectorYNWebCamExample.unity
+  - enabled: 0
+    path: Assets/Scenes/FaceDetectorYNWebCamExample.unity
     guid: c63adffd16329aa43a5203a5c4abfeb9
+  - enabled: 1
+    path: Assets/OpenCVForUnity/Examples/MainModules/dnn/FaceDetectionYuNetExample/FaceDetectionYuNetExample.unity
+    guid: fb83be332100c7b40928aafe39c0cf76
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

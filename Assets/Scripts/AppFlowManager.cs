@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
@@ -14,16 +13,8 @@ public class AppFlowManager : MonoBehaviour
     [SerializeField] private RawImage _videoImage;
     private bool _faceFound;
 
-    /*
-    private string[] texts = new[] {"Bűn #1", "Bűn #2", "Bűn #3", "Bűn #4", "Bűn #5", "Bűn #6", "Bűn #7", "Bűn #8", "Bűn #9", "Bűn #10"};
-    [SerializeField] private float _timeBetweenRandomPicks = 0.5f; // Time between text changes (in seconds)
-    [SerializeField] private float _randomizationDuration = 10.0f; // Total duration for cycling text (in seconds)
-    [SerializeField] private float _resultOnScreenDuration = 10.0f; // Total duration for cycling text (in seconds)
-    [SerializeField] private float _trackLostGracePeriod = 1.0f; // Total duration for cycling text (in seconds)
-    */
-    
     private float timer;
-    private bool _isCycling, _flowStarted, _isResultShowing;
+    private bool _flowStarted;
 
     private float _currentTrackLostTimer, _currentResultShowingTimer;
 
@@ -61,34 +52,16 @@ public class AppFlowManager : MonoBehaviour
 
         // Limit the size of the history to fit the trackLostGracePeriod
         int historyLength = Mathf.CeilToInt(ConfigHandler.TrackLostGracePeriod / Time.deltaTime);
-        if (_faceFoundHistory.Count > historyLength)
-        {
-            _faceFoundHistory.Dequeue();
-        }
+        if (_faceFoundHistory.Count > historyLength) _faceFoundHistory.Dequeue();
 
         // Check if all values in the history are false (face lost)
-        if (_faceFoundHistory.All(value => !value))
-        {
-            FaceFound = false; // Set FaceFound to false if all history is false
-        }
-        
-        if (_faceFoundHistory.All(value => value))
-        {
-            FaceFound = true; // Set FaceFound to true if all history is true
-        }
+        if (_faceFoundHistory.All(value => !value)) FaceFound = false; // Set FaceFound to false if all history is false
 
-        /*
-        if (FaceDetected && _silhuette.activeSelf)
-        {
-            _silhuette.SetActive(false);
-            _fakeBGWithSilhuette.SetActive(true);
-        }
-        */
+        if (_faceFoundHistory.All(value => value)) FaceFound = true; // Set FaceFound to true if all history is true
     }
 
     private void OnFaceFound()
     {
-        Debug.Log("FaceFound");
         _silhuette.SetActive(false);
         _fakeBGWithSilhuette.SetActive(true);
         _videoImage.gameObject.SetActive(false);
@@ -98,14 +71,12 @@ public class AppFlowManager : MonoBehaviour
 
     private void OnFaceLost()
     {
-        Debug.Log("FaceLost");
         _silhuette.SetActive(true);
         _fakeBGWithSilhuette.SetActive(false);
     }
 
     private void OnResultDurationOver()
     {
-        Debug.Log("Result duration over");
         _flowRoutine = null;
         _faceFoundHistory.Clear();
         if (!FaceDetected)
@@ -120,7 +91,6 @@ public class AppFlowManager : MonoBehaviour
     
     private IEnumerator CycleText()
     {
-        _isCycling = true;
         timer = ConfigHandler.RandomizationDuration;
         while (timer > 0f)
         {
@@ -128,10 +98,7 @@ public class AppFlowManager : MonoBehaviour
             yield return new WaitForSeconds(ConfigHandler.TimeBetweenRandomPicks);
             timer -= ConfigHandler.TimeBetweenRandomPicks;
         }
-        _isCycling = false;
-        _isResultShowing = true;
         yield return new WaitForSeconds(ConfigHandler.ResultOnScreenDuration);
-        _isResultShowing = false;
         OnResultDurationOver();
     }
 

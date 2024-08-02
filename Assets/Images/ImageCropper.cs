@@ -14,7 +14,7 @@ public class ImageCropper : MonoBehaviour
 
     private void Awake()
     {
-        string fileName = ConfigHandler.BackgroundFileName; // Replace with your image filename
+        string fileName = ""; // Replace with your image filename
         string filePath = Application.streamingAssetsPath + "/" + fileName;
 
         byte[] data = System.IO.File.ReadAllBytes(filePath);

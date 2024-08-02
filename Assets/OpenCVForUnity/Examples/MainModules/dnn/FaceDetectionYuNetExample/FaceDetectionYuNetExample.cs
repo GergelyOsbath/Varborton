@@ -19,8 +19,12 @@ namespace OpenCVForUnityExample
     /// </summary>
     public class FaceDetectionYuNetExample : DnnObjectDetectionWebCamTextureExample
     {
+        public AppFlowManager AppFlowManager;
+        public GameObject targetObject;
         [TooltipAttribute("Keep keep_top_k for results outputing.")]
         public int keep_top_k = 750;
+
+        private float previousMoveDistance = 0;
 
         protected Scalar[] pointsColors = new Scalar[] {
             new Scalar(0, 0, 255, 255), // # right eye
@@ -164,6 +168,15 @@ namespace OpenCVForUnityExample
 
             Dnn.NMSBoxes(boxes, confidences, confThreshold, nmsThreshold, indices, 1f, keep_top_k);
 
+            bool faceDetectedInMiddle = false;
+            
+            float screenMidY = frame.height() / 2;
+            
+            // Define minimum bounding box size
+            float minBoxWidth = frame.width() * ConfigHandler.FaceDetectionMinWidth; // Example: 10% of the frame width
+            float minBoxHeight = frame.height() * ConfigHandler.FaceDetectionMinHeight; // Example: 10% of the frame height
+
+            float topOfDetectedFace = 0;
 
             // # Draw boudning boxes and landmarks on the original image
             for (int i = 0; i < indices.total(); ++i)
@@ -174,16 +187,61 @@ namespace OpenCVForUnityExample
                 bboxes.get(idx, 0, bbox_arr);
                 float[] confidence_arr = new float[1];
                 confidences.get(idx, 0, confidence_arr);
-                drawPred(0, confidence_arr[0], bbox_arr[0], bbox_arr[1], bbox_arr[0] + bbox_arr[2], bbox_arr[1] + bbox_arr[3], frame);
+                //drawPred(0, confidence_arr[0], bbox_arr[0], bbox_arr[1], bbox_arr[0] + bbox_arr[2], bbox_arr[1] + bbox_arr[3], frame);
 
                 Mat landmarks = dets.colRange(4, 14);
                 float[] landmarks_arr = new float[10];
                 landmarks.get(idx, 0, landmarks_arr);
                 Point[] points = new Point[] { new Point(landmarks_arr[0], landmarks_arr[1]), new Point(landmarks_arr[2], landmarks_arr[3]),
                     new Point(landmarks_arr[4], landmarks_arr[5]), new Point(landmarks_arr[6], landmarks_arr[7]), new Point(landmarks_arr[8], landmarks_arr[9])};
-                drawPredPoints(points, frame);
+                //drawPredPoints(points, frame);
+                
+                // Check if the detected face is in the middle of the screen
+                float centerX = bbox_arr[0] + bbox_arr[2] / 2;
+                float centerY = bbox_arr[1] + bbox_arr[3] / 2;
+                float boxWidth = bbox_arr[2];
+                float boxHeight = bbox_arr[3];
+                
+                //Debug.Log($"{boxWidth} : {boxHeight} -> {minBoxWidth} : {minBoxHeight}");
+                
+                if (centerX > frame.width() * ConfigHandler.FaceDetectionCenterWidthMin && centerX < frame.width() * ConfigHandler.FaceDetectionCenterWidthMax && centerY > frame.height() * ConfigHandler.FaceDetectionCenterHeightMin && centerY < frame.height() * ConfigHandler.FaceDetectionCenterHeightMax &&
+                    boxWidth > minBoxWidth && boxHeight > minBoxHeight)
+                {
+                    topOfDetectedFace = bbox_arr[1];
+                    faceDetectedInMiddle = true;
+                }
+                
+            }
+
+            if (faceDetectedInMiddle)
+            {
+                Debug.Log($"{topOfDetectedFace} : {screenMidY}");
+                if (topOfDetectedFace > screenMidY)
+                {
+                    float moveDistance = topOfDetectedFace - screenMidY;
+                    if (previousMoveDistance < moveDistance)
+                    {
+                        previousMoveDistance = moveDistance;
+                        if (targetObject.gameObject.transform.position.y < 140.0f) targetObject.transform.position = new Vector3(0, moveDistance * 3.5f, 0);
+                        else targetObject.gameObject.transform.position = new Vector3(0, 140.0f, 0);
+                    }
+                }
+
+                //if (targetObject.transform.position.y > 140) targetObject.transform.position = Vector3.zero;
+                /*
+                float moveDistance = topOfDetectedFace - screenMidY;
+                Vector3 newPosition = targetObject.transform.position;
+                newPosition.y = moveDistance;
+                targetObject.transform.position = newPosition;
+                */
+            }
+            else
+            {
+                previousMoveDistance = 0;
+                targetObject.transform.position = Vector3.zero;
             }
             
+            AppFlowManager.FaceDetected = faceDetectedInMiddle;
         }
 
         protected virtual void drawPredPoints(Point[] points, Mat frame)
